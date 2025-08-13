@@ -50,7 +50,7 @@ class EventController extends Controller
     public function destroy(string $id)
     {
         return response([
-            "status" => boolval(Country::findOrFail($id)->delete())
+            "status" => boolval(Event::findOrFail($id)->delete())
         ], 201);
     }
 }
